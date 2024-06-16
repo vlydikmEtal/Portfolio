@@ -1,0 +1,19 @@
+@mixin font-face($family, $filename: $family, $weight: 400, $style: normal) {
+  @font-face {
+    font-family: "#{$family}";
+    font-display: swap;
+    src: url("..//fonts/#{$filename}.woff2") format("woff2");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@include font-face("Mosk", "MoskNormal400", 400, normal);
+@include font-face("Mosk", "MoskMedium500", 500, normal);
+@include font-face("Mosk", "MoskSemi-Bold600", 600, normal);
+@include font-face("Mosk", "MoskThin100", 100, normal);
+@include font-face("Mosk", "MoskExtra-Light200", 200, normal);
+@include font-face("Mosk", "MoskLight300", 300, normal);
+@include font-face("Mosk", "MoskBold700", 700, normal);
+@include font-face("Mosk", "MoskExtra-Bold800", 800, normal);
+@include font-face("Mosk", "MoskUltra-Bold900", 900, normal);

@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.scss","style.css"],"names":[],"mappings":"AAAA,KACE,YAAA,CACA,qBCCF","file":"style.min.css","sourcesContent":["body {\r\n  display: flex;\r\n  flex-direction: column;\r\n}","body {\n  display: flex;\n  flex-direction: column;\n}"]}

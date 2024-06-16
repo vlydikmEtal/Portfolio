@@ -1,0 +1,108 @@
+.section__technologies {
+  padding: 60px 0;
+  background-color: #4c3a69;
+  color: #fff;
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    .button {
+      align-self: center;
+    }
+  }
+  &-title {
+    margin-bottom: 50px;
+    h2 {
+      font-size: calc(23px + 30 * ((100vw - 320px) / (1920 - 320)));
+      font-weight: 800;
+    }
+  }
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+}
+.section__technologies-item {
+  width: 100%;
+  max-width: 470px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  &:hover {
+    transform: translate(10px, -10px);
+    h4 {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+} 
+.technologies__item-top {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #fff;
+  padding: 15px;
+  span {
+    width: 17px;
+    margin-right: 6px;
+    display: block;
+    height: 17px;
+    background-color: #fff;
+    border-radius: 50%;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.technologies__item-info {
+  padding: 30px;
+  h4 {
+    font-size: calc(18px + 6 * ((100vw - 320px) / (1920 - 320)));
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    &::after {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      width: 100%;
+      height: 15px;
+      border-radius: 6px;
+      background: #774069;
+      margin-top: 10px;
+    }
+  }
+  p {
+    font-size: calc(16px + 3 * ((100vw - 320px) / (1920 - 320)));
+    line-height: 1.5;
+    word-spacing: 2px;
+  }
+}
+@media (max-width: 1454px) {
+  .section__technologies-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .section__technologies-item {
+    margin: 20px;
+  }
+}
+@media (max-width: 440px) {
+  .technologies__item-info {
+    padding: 15px;
+  }
+  .section__technologies-item {
+    margin: 0;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

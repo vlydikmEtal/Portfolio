@@ -1,0 +1,160 @@
+@import '..//sass/fonts.scss';
+
+body {
+  font-family: 'Mosk', Arial, sans-serif;
+  &::-webkit-scrollbar-track {
+    background: rgb(42, 35, 57);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #774069;
+    border-radius: 6px;
+    border: 0;
+  }
+  &::-webkit-scrollbar {
+    width: 11px;
+  }
+}
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+  min-height: 100%;
+  &.light {
+    .header {
+      .beam {
+        opacity: 0;
+      }
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(111, 220, 191, 1) 100%
+      );
+    }
+    .logo {
+      color: #6eccb3e6;
+    }
+    .header__top-list {
+      color: #000;
+    }
+    .header__top-item {
+      &:hover {
+        color: #000;
+        &::after {
+          background: #000;
+        }
+      }
+    }
+    .header__body-info {
+      color: #000;
+      &:hover {
+        .outline {
+          -webkit-text-fill-color: #000;
+          -webkit-text-stroke-width: 1.5px;
+        }
+      }
+    }
+    .outline {
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 1.5px;
+    }
+    .section__technologies {
+      background-color: #ae8fdb;
+      &-item {
+        background: #fff;
+        color: #000;
+        border: 2px solid #000;
+      }
+      &-inner {
+        .button {
+          background: #fff;
+          color: #000;
+          &:hover {
+            background: #000;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .technologies__item-top {
+      border-bottom: 2px solid #000;
+      span {
+        background-color: #000;
+      }
+    }
+    .technologies__item-info {
+      h4 {
+        &::after {
+          background: #f2c3c0;
+        }
+      }
+    }
+    .section__about {
+      background-color: #fef8b485;
+      color: #000;
+    }
+    .section__social-item {
+      opacity: 1;
+      svg {
+        path {
+          fill: #000;
+        }
+      }
+    }
+    .button--color {
+      background: #000;
+      transition: all 0.3s ease;
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+    .section__skills-list {
+      background: none;
+      border-bottom: none;
+    }
+    .section__skill-wrapper {
+      background-image: url(..//img/decor/bg.png);
+      background-repeat: repeat-x;
+      border-bottom: 1px solid #ddd;
+    }
+    .section__skills-item {
+      background-color: transparent;
+      color: #000;
+      position: relative;
+      z-index: 1;
+    }
+    .skills__info {
+      color: #000;
+    }
+    .skills__text  {
+      color: #000;
+    }
+  }
+}
+.burger {
+  display: none;
+}
+.button {
+  display: inline-block;
+  background: #4c3a69;
+  padding: 10px 23px;
+  font-size: calc(18px + 2 * ((100vw - 320px) / (1920 - 320)));
+  border: 2px solid #fff;
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 1) 3px 3px 4px;
+  transition: all 0.3s ease;
+  &:hover {
+    background: #fff;
+    color: #4c3a69;
+  }
+}
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 1520px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@import '..//sass/header.scss';
+@import '..//sass/main.scss';
+@import '..//sass/about.scss';
+@import '..//sass/contact.scss';
