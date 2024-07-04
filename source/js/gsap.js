@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     },
   })
 
-
   let stepAnimation = () => {
     const tlStep = gsap.timeline({
       defaults: { duration: .6 },
@@ -67,4 +66,50 @@ document.addEventListener('DOMContentLoaded', (event) => {
     })
   })
 
+  gsap.from('.section__about-img', {
+    x: -100, opacity: 0, delay: 0.2, scrollTrigger: {
+      trigger: '.section__about-img', duration: 1.3
+    }
+  })
+  
+  gsap.from('.section__about-info', {
+    y: 100, opacity: 0, delay: 0.2, scrollTrigger: {
+      trigger: '.section__about-info', duration: 1.3
+    }
+  })
+
+
+
+  let btnAnimation = () => {
+    const btnStep = gsap.timeline({
+      defaults: { duration: .6 },
+      repeat: -1,
+      repeatDelay: 1.5,
+    })
+  
+    btnStep
+      .to('.button--color', {
+        y: -15,
+      })
+      .to('.button--color', {
+        ease: "bounce.out",
+        y: 0,
+      })
+      return btnStep
+  }
+
+  let animationBtn = btnAnimation()
+
+  const btnStep = document.querySelectorAll('.button--color')
+
+  btnStep.forEach((item) => {
+    item.addEventListener('mouseover', () => {
+      animationBtn.pause()
+    })
+
+    item.addEventListener('mouseout', () => {
+      animationBtn.play()
+    })
+  })
+  
 })
