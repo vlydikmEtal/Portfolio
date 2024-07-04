@@ -28,7 +28,7 @@ const styles = () => {
 
 // Copy CSS
 const copyCss = () => {
-  return gulp.src('source/css/*.css') // Assuming reset.css is located in source/css/
+  return gulp.src('source/css/*.css') 
     .pipe(gulp.dest('build/css'));
 };
 
@@ -40,7 +40,7 @@ const html = () => {
 
 // Scripts
 const scripts = () => {
-  return gulp.src('source/js/*.js') // Copy all JS files
+  return gulp.src('source/js/*.js')
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
 };
@@ -118,10 +118,10 @@ const clean = async () => {
 // Watcher
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
-  gulp.watch('source/js/*.js', gulp.series(scripts)); // Watch for changes in all JS files
+  gulp.watch('source/js/*.js', gulp.series(scripts));
   gulp.watch('source/*.html', gulp.series(html, reload));
   gulp.watch('source/css/*.css', gulp.series(copyCss, reload));
-  gulp.watch('source/img/**/*', gulp.series(copyImages, reload)); // Watch for changes in images
+  gulp.watch('source/img/**/*', gulp.series(copyImages, reload)); 
 };
 
 // Server

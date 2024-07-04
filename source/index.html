@@ -20,15 +20,13 @@
     />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.min.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>vlydikmEtal WebSite Portfolio</title>
     <meta
       name="description"
       content="Explore the portfolio of an experienced developer showcasing a wide range of projects, skills in various programming languages, and expertise in web and software development. Discover innovative solutions and creative work that highlight a commitment to excellence in technology."
     />
     <script src="js/script.js" defer></script>
-    <script src="js/loader.js" defer></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="js/gsap.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -39,7 +37,7 @@
         <div class="header__top">
           <div class="container">
             <div class="header__top-inner">
-              <a href="index.html" class="header__logo logo"> vlydikmEtal</a>
+              <a href="index.html" class="header__logo logo">vlydikmEtal</a>
               <nav class="header__top-nav">
                 <ul class="header__top-list">
                   <li class="header__top-item">
@@ -68,17 +66,17 @@
                   </li>
                 </ul>
               </nav>
+              <label class="switch">
+                <input class="switch__input light" type="checkbox" data-theme-toggle>
+                <span class="switch__slider"></span>
+              </label>
             </div>
           </div>
         </div>
         <div class="header__body">
           <div class="container">
             <div class="header__body-inner">
-              <div
-                class="header__body-hero"
-                data-aos="fade-right"
-                data-aos-duration="1000"
-              >
+              <div class="header__body-hero">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="Illustration Hero__svg"
@@ -264,7 +262,7 @@
                         height="4.23"
                         fill="#404040"
                       ></rect>
-                      <g id="light">
+                      <g class="light">
                         <path
                           id="bulb"
                           d="M181.07 121.86c0 7.11-5.26 12.88-11.75 12.88s-11.74-5.77-11.74-12.88S162.84 109 169.32 109s11.75 5.74 11.75 12.86z"
@@ -1264,23 +1262,19 @@
                   </g>
                 </svg>
               </div>
-              <div
-                class="header__body-info"
-                data-aos="fade-left"
-                data-aos-duration="1000"
-              >
+              <div class="header__body-info">
                 <p class="header__logo-text">
                   👋 Hi, I'm vlydikmEtal
                   <span class="header__logo-cursor">_</span>
                 </p>
                 <h1>
-                  I'm <span class="outline">frontend developer</span> <br />
-                  based in Belarus <br />
-                  I like making <br />
-                  <span class="outline">fun</span>, interactive <br />
-                  things with <br />
-                  code. I also <span class="outline">talk</span> <br />
-                  & <span class="outline">write </span> about <br />
+                  I'm <span class="outline">frontend developer</span> 
+                  based in Belarus 
+                  I like making 
+                  <span class="outline">fun</span>, interactive 
+                  things with 
+                  code. I also <span class="outline">talk</span> 
+                  & <span class="outline">write </span> about 
                   those things.
                 </h1>
               </div>
@@ -1293,12 +1287,12 @@
           <div class="container">
             <div class="section__technologies-inner">
               <div class="section__technologies-title">
-                <h2 data-aos="fade-right" data-aos-duration="1000">
-                  My Technologies
-                </h2>
+                <h2>My Technologies</h2>
               </div>
               <ul class="section__technologies-list">
-                <li class="section__technologies-item">
+                <li
+                  class="section__technologies-item section__technologies-item--active"
+                >
                   <div class="technologies__item-top">
                     <span></span>
                     <span></span>
@@ -1315,7 +1309,9 @@
                     </p>
                   </div>
                 </li>
-                <li class="section__technologies-item">
+                <li
+                  class="section__technologies-item section__technologies-item--duration"
+                >
                   <div class="technologies__item-top">
                     <span></span>
                     <span></span>
@@ -1334,7 +1330,9 @@
                     </p>
                   </div>
                 </li>
-                <li class="section__technologies-item">
+                <li
+                  class="section__technologies-item section__technologies-item--duration"
+                >
                   <div class="technologies__item-top">
                     <span></span>
                     <span></span>
@@ -1366,11 +1364,7 @@
           <div class="container">
             <div class="section__about-inner">
               <div class="section__about-wrapp">
-                <div
-                  class="section__about-links"
-                  data-aos="fade-down"
-                  data-aos-duration="1000"
-                >
+                <div class="section__about-links">
                   <div class="section__about-img">
                     <img src="img/icon/me.jpg" alt="autor" />
                   </div>
@@ -1380,11 +1374,7 @@
                     >Follow <img src="img/icon/instagram.svg" alt=""
                   /></a>
                 </div>
-                <div
-                  class="section__about-info"
-                  data-aos="fade-up-right"
-                  data-aos-duration="1000"
-                >
+                <div class="section__about-info">
                   <h2>
                     Vladislav mEtal
                     <img src="img/icon/icon-me.png" alt="icon" />
@@ -1568,5 +1558,7 @@
         </section>
       </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   </body>
 </html>

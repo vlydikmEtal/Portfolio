@@ -1,21 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
-  AOS.init()
-
-  const lightTheme = document.getElementById('light')
+  const lightTheme = document.querySelectorAll('.light')
   const lamp = document.querySelector('.beam')
   const site = document.querySelector('.wrapper')
 
-  lightTheme.addEventListener('click', () => {
-    const hasLightClass = site.classList.toggle('light')
-    if (hasLightClass) {
-      lamp.classList.remove('open')
-    } else {
-      lamp.classList.add('open')
-    }
+  lightTheme.forEach((item) => {
+    item.addEventListener('click', () => {
+      const hasLightClass = site.classList.toggle('light')
+      if (hasLightClass) {
+        lamp.classList.remove('open')
+      } else {
+        lamp.classList.add('open')
+      }
+    })
   })
 
   const burger = document.querySelectorAll('.burger')
   const menu = document.querySelectorAll('.header__top')
+  const menuLink = document.querySelectorAll('.header__top-item')
 
   burger.forEach((item) => {
     item.addEventListener('click', () => {
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   })
 
-  menu.forEach((item) => {
+  menuLink.forEach((item) => {
     item.addEventListener('click', () => {
       burger.forEach((item) => {
         item.classList.remove('burger__active')
